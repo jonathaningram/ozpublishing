@@ -1,0 +1,9 @@
+<?php
+
+$_helper    = $this->helper('catalog/output');
+$_category  = $this->getCurrentCategory();
+$_items = Mage::getBlockSingleton('catalog/product_list')->getLoadedProductCollection();
+
+?>
+
+<h1><?php echo $_helper->categoryAttribute($_category, $_category->getName(), 'name')?> <small>(<?php echo $_items->getSize()?>)</small></h1>
