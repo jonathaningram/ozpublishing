@@ -11,7 +11,7 @@
 ?>
 <?php  $_order = $this->getOrder() ?>
 <?php echo $this->getMessagesBlock()->getGroupedHtml() ?>
-<div class="page-title title-buttons">
+<div class="page-header title-buttons">
     <h1><?php echo $this->__('Order #%s - %s', $_order->getRealOrderId(), $_order->getStatusLabel()) ?></h1>
     <?php echo $this->getChildHtml('buttons') ?>
 </div>
