@@ -1,0 +1,50 @@
+@media (min-width: 980px) and (max-width: 1199px){
+	.navbar .nav > li > a {
+		padding: 12px 15px;
+		padding: 12px 15px \9;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 979px) {	
+	.navbar .nav > li > a {
+		padding: 5px 20px;
+		-webkit-transition: all 0.3s ease-in-out;
+           -moz-transition: all 0.3s ease-in-out;
+             -o-transition: all 0.3s ease-in-out;
+            -ms-transition: all 0.3s ease-in-out;
+                transition: all 0.3s ease-in-out;
+	}	
+}
+
+@media (max-width: 767px) {
+	.navbar .nav > li > a {
+		font-size: 12px;
+		padding: 5px 20px;
+		-webkit-transition: all 0.3s ease-in-out;
+           -moz-transition: all 0.3s ease-in-out;
+             -o-transition: all 0.3s ease-in-out;
+            -ms-transition: all 0.3s ease-in-out;
+                transition: all 0.3s ease-in-out;
+	}	
+    .nav-collapse {
+        margin-top: 5px;
+    }
+    .nav-collapse .dropdown-menu a {
+        background-color: #FFFFFF;
+        font-size: 12px;
+        padding: 5px 20px;
+        margin-bottom: 2px;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+	body {
+		padding-bottom: 20px;
+	}	
+}
+
+@media (max-width: 479px) {
+	body {
+		padding-bottom: 20px;
+	}	
+}
