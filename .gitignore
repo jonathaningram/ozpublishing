@@ -1,3 +1,4 @@
+.DS_Store
 .modgit/
 app/code/community/Find/
 app/code/community/Phoenix/
@@ -39,7 +40,6 @@ app/Mage.php
 cron.php
 cron.sh
 downloader/
-errors/
 favicon.ico
 get.php
 includes/
@@ -77,11 +77,14 @@ LICENSE.html
 LICENSE.txt
 LICENSE_EE*
 mage
+media/catalog/
 media/customer/
 media/downloadable/
+media/email/
 media/.htaccess
 media/import/
 media/xmlconnect/
+media/wysiwyg/
 nbproject/
 pear
 pear/
