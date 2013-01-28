@@ -70,14 +70,10 @@
                     <stylesheet>css/bootstrap.css</stylesheet>
                 </action>
                 <action method="addCss">
-                    <stylesheet>css/bootstrap-responsive.css</stylesheet>
-                </action>
-
-<!--                <action method="addCss">
-                    <stylesheet>css/ozp-wip.css</stylesheet>
-                </action>-->
-                <action method="addCss">
                     <stylesheet>css/ozp.css</stylesheet>
+                </action>
+                <action method="addCss">
+                    <stylesheet>css/bootstrap-responsive.css</stylesheet>
                 </action>
                 <action method="addCss">
                     <stylesheet>css/ozp-responsive.css</stylesheet>
