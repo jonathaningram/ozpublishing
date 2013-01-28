@@ -1,33 +1,19 @@
-<?php
-/**
- * Magento responsive theme
- *
- * @category    design
- * @package     bootstrapped_default
- * @copyright   Copyright (c) 2012 Magenthon (http://magenthon.com)
- * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
- * @author      Vedran Subotic <vedran@magenthon.com>
- */
-?>
 <div class="box-collateral box-tags">
-    <h2><?php echo $this->__('Product Tags') ?></h2>
     <?php echo $this->getChildHtml('list_before')?>
     <?php if( $this->getCount() ): ?>
-    <h3><?php echo $this->__('Other people marked this product with these tags:') ?></h3>
+    <p><?php echo $this->__('Other people marked this product with these tags:') ?></p>
     <ul id="<?php echo $this->getUniqueHtmlId('product-tags_'); ?>" class="product-tags">
-        <?php echo $this->renderTags('<li><a href="%1$s">%2$s</a> (%3$s)</li>') ?>
+        <?php echo $this->renderTags('<li><a href="%1$s"><span class="label">%2$s (%3$s)</span></a></li>') ?>
     </ul>
     <?php endif; ?>
-    <form id="addTagForm" action="<?php echo $this->getFormAction(); ?>" method="get" class="form-inline well">
-            <label for="productTagName"><?php echo $this->__('Add Your Tags:') ?></label>
-                <input type="text" class="input-text required-entry" name="productTagName" id="productTagName" />
-            <button type="button" title="<?php echo $this->__('Add Tags') ?>" class="btn" onclick="submitTagForm()">
-                <span>
-                    <span><?php echo $this->__('Add Tags') ?></span>
-                </span>
-            </button>
+    <form id="addTagForm" action="<?php echo $this->getFormAction(); ?>" method="get" class="form-inline">
+        <label for="productTagName"><?php echo $this->__('Add your tags') ?></label>
+        <input type="text" class="required-entry" name="productTagName" id="productTagName" />
+        <button type="button" title="<?php echo $this->__('Add tags') ?>" class="btn" onclick="submitTagForm()">
+            <?php echo $this->__('Add tags') ?>
+        </button>
     </form>
-    <p class="note"><?php echo $this->__("Use spaces to separate tags. Use single quotes (') for phrases.") ?></p>
+    <p class="help-block"><?php echo $this->__("Use spaces to separate tags. Use single quotes (') for phrases.") ?></p>
     <script type="text/javascript">
     //<![CDATA[
         var addTagFormJs = new VarienForm('addTagForm');

@@ -28,7 +28,7 @@
                         <?php echo $this->getChildHtml('product_type_data') ?>
                         <?php echo $this->getTierPriceHtml() ?>
                         <?php echo $this->getChildHtml('extrahint') ?>
-
+                        
                         <?php if (!$this->hasOptions()): ?>
                             <div class="add-to-box">
                                 <?php if ($_product->isSaleable()): ?>
@@ -39,6 +39,7 @@
                                 <?php echo $this->getChildHtml('addto') ?>
                             </div>
                         <?php endif; ?>
+                        
                         <?php if ($this->canEmailToFriend()): ?>
                             <p class="email-friend">
                                 <a href="<?php echo $this->helper('catalog/product')->getEmailToFriendUrl($_product) ?>"><span class="icon-envelope"></span> <?php echo $this->__('Email to a friend') ?></a>
@@ -51,7 +52,6 @@
                         <?php if ($_product->isSaleable() && $this->hasOptions()): ?>
                             <?php echo $this->getChildChildHtml('container1', '', true, true) ?>
                         <?php endif; ?>
-
                     </div>
                     <?php if ($_product->isSaleable() && $this->hasOptions()): ?>
                         <?php echo $this->getChildChildHtml('container2', '', true, true) ?>

@@ -1,63 +1,61 @@
 <?php echo $this->getMessagesBlock()->getGroupedHtml() ?>
-<div class="well">
-    <form action="<?php echo $this->getUrl('customer/account/editPost') ?>" method="post" id="form-validate" class="form-horizontal">
-        <fieldset>
-            <legend><?php echo $this->__('Account information') ?></legend>
-            <?php echo $this->getLayout()->createBlock('customer/widget_name')->setObject($this->getCustomer())->toHtml() ?>
-            <?php echo $this->getBlockHtml('formkey')?>
-            <div class="control-group">
-                <label for="email" class="control-label required"><?php echo $this->__('Email address') ?></label>
-                <div class="controls">
-                    <input type="text" name="email" id="email" value="<?php echo $this->htmlEscape($this->getCustomer()->getEmail()) ?>" class="span4 required-entry validate-email" />
-                </div>
+<form action="<?php echo $this->getUrl('customer/account/editPost') ?>" method="post" id="form-validate" class="form-horizontal">
+    <fieldset>
+        <legend><?php echo $this->__('Account information') ?></legend>
+        <?php echo $this->getLayout()->createBlock('customer/widget_name')->setObject($this->getCustomer())->toHtml() ?>
+        <?php echo $this->getBlockHtml('formkey')?>
+        <div class="control-group">
+            <label for="email" class="control-label required"><?php echo $this->__('Email address') ?></label>
+            <div class="controls">
+                <input type="text" name="email" id="email" value="<?php echo $this->htmlEscape($this->getCustomer()->getEmail()) ?>" class="span4 required-entry validate-email" />
             </div>
-            <?php $_dob = $this->getLayout()->createBlock('customer/widget_dob') ?>
-            <?php if ($_dob->isEnabled()): ?>
-                <li><?php echo $_dob->setDate($this->getCustomer()->getDob())->toHtml() ?></li>
-            <?php endif ?>
-            <?php $_taxvat = $this->getLayout()->createBlock('customer/widget_taxvat') ?>
-            <?php if ($_taxvat->isEnabled()): ?>
-                <li><?php echo $_taxvat->setTaxvat($this->getCustomer()->getTaxvat())->toHtml() ?></li>
-            <?php endif ?>
-            <?php $_gender = $this->getLayout()->createBlock('customer/widget_gender') ?>
-            <?php if ($_gender->isEnabled()): ?>
-                <li><?php echo $_gender->setGender($this->getCustomer()->getGender())->toHtml() ?></li>
-            <?php endif ?>
-            <div class="control-group">
-                <label class="control-label" for="change_password"><?php echo $this->__('Change password') ?></label>
-                <div class="controls">
-                    <label class="checkbox">
-                        <input type="checkbox" value="1" id="change_password" name="change_password" <?php if($this->getCustomer()->getChangePassword()==1): ?> checked="checked"<?php endif; ?> onclick="setPasswordForm(this.checked)" />
-                    </label>
-                </div>
-            </div>
-        </fieldset>
-        <fieldset style="display:none;">
-            <legend><?php echo $this->__('Change password') ?></legend>
-            <div class="control-group">
-                <label for="current_password" class="control-label required"><?php echo $this->__('Current password') ?></label>
-                <div class="controls">
-                    <input type="password" class="span3" name="current_password" id="current_password" />
-                </div>
-            </div>
-            <div class="control-group">
-                <label for="password" class="control-label required"><?php echo $this->__('New password') ?></label>
-                <div class="controls">
-                    <input type="password" class="span3 validate-password" name="password" id="password" />
-                </div>
-            </div>
-            <div class="control-group">
-                <label for="confirmation" class="control-label required"><?php echo $this->__('New password (again)') ?></label>
-                <div class="controls">
-                    <input type="password" class="span3 validate-cpassword" name="confirmation" id="confirmation" />
-                </div>
-            </div>
-        </fieldset>
-        <div class="form-actions">
-            <button type="submit" class="btn btn-large"><?php echo $this->__('Save') ?></button>
         </div>
-    </form>
-</div>
+        <?php $_dob = $this->getLayout()->createBlock('customer/widget_dob') ?>
+        <?php if ($_dob->isEnabled()): ?>
+            <li><?php echo $_dob->setDate($this->getCustomer()->getDob())->toHtml() ?></li>
+        <?php endif ?>
+        <?php $_taxvat = $this->getLayout()->createBlock('customer/widget_taxvat') ?>
+        <?php if ($_taxvat->isEnabled()): ?>
+            <li><?php echo $_taxvat->setTaxvat($this->getCustomer()->getTaxvat())->toHtml() ?></li>
+        <?php endif ?>
+        <?php $_gender = $this->getLayout()->createBlock('customer/widget_gender') ?>
+        <?php if ($_gender->isEnabled()): ?>
+            <li><?php echo $_gender->setGender($this->getCustomer()->getGender())->toHtml() ?></li>
+        <?php endif ?>
+        <div class="control-group">
+            <label class="control-label" for="change_password"><?php echo $this->__('Change password') ?></label>
+            <div class="controls">
+                <label class="checkbox">
+                    <input type="checkbox" value="1" id="change_password" name="change_password" <?php if($this->getCustomer()->getChangePassword()==1): ?> checked="checked"<?php endif; ?> onclick="setPasswordForm(this.checked)" />
+                </label>
+            </div>
+        </div>
+    </fieldset>
+    <fieldset style="display:none;">
+        <legend><?php echo $this->__('Change password') ?></legend>
+        <div class="control-group">
+            <label for="current_password" class="control-label required"><?php echo $this->__('Current password') ?></label>
+            <div class="controls">
+                <input type="password" class="span3" name="current_password" id="current_password" />
+            </div>
+        </div>
+        <div class="control-group">
+            <label for="password" class="control-label required"><?php echo $this->__('New password') ?></label>
+            <div class="controls">
+                <input type="password" class="span3 validate-password" name="password" id="password" />
+            </div>
+        </div>
+        <div class="control-group">
+            <label for="confirmation" class="control-label required"><?php echo $this->__('New password (again)') ?></label>
+            <div class="controls">
+                <input type="password" class="span3 validate-cpassword" name="confirmation" id="confirmation" />
+            </div>
+        </div>
+    </fieldset>
+    <div class="form-actions">
+        <button type="submit" class="btn btn-large"><?php echo $this->__('Save') ?></button>
+    </div>
+</form>
 <script type="text/javascript">
 //<![CDATA[
     var dataForm = new VarienForm('form-validate', true);

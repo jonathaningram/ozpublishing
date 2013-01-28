@@ -1,14 +1,3 @@
-<?php
-/**
- * Magento responsive theme
- *
- * @category    design
- * @package     bootstrapped_default
- * @copyright   Copyright (c) 2012 Magenthon (http://magenthon.com)
- * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
- * @author      Vedran Subotic <vedran@magenthon.com>
- */
-?>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,8 +7,17 @@
 <meta name="description" content="<?php echo htmlspecialchars($this->getDescription()) ?>" />
 <meta name="keywords" content="<?php echo htmlspecialchars($this->getKeywords()) ?>" />
 <meta name="robots" content="<?php echo htmlspecialchars($this->getRobots()) ?>" />
-<link rel="icon" href="http://bootstrapped.magenthon.com/favicon.ico" type="image/x-icon" />
-<link rel="shortcut icon" href="http://bootstrapped.magenthon.com/favicon.ico" type="image/x-icon" />
+<link rel="icon" href="<?php echo $this->getSkinUrl('img/favicon.ico') ?>" type="image/x-icon" />
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo $this->getSkinUrl('img/logo-114x114-bw.png') ?>"/>
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo $this->getSkinUrl('img/logo-72x72-bw.png') ?>"/>
+<link rel="apple-touch-icon-precomposed" href="<?php echo $this->getSkinUrl('img/logo-57x57-bw.png') ?>"/>
+<link rel="apple-touch-icon" href="<?php echo $this->getSkinUrl('img/logo-114x114-bw.png') ?>"/>
+
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Droid+Sans:400,700">
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Droid+Serif">
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Boogaloo">
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Economica:700,400italic">
+
 <!--[if lt IE 7]>
 <script type="text/javascript">
 //<![CDATA[

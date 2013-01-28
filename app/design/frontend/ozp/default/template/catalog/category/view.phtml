@@ -1,16 +1,5 @@
 <?php
 /**
- * Magento responsive theme
- *
- * @category    design
- * @package     bootstrapped_default
- * @copyright   Copyright (c) 2012 Magenthon (http://magenthon.com)
- * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
- * @author      Vedran Subotic <vedran@magenthon.com>
- */
-?>
-<?php
-/**
  * Category view template
  *
  * @see Mage_Catalog_Block_Category_View
@@ -31,7 +20,7 @@
 ?>
 
 <?php if($this->IsRssCatalogEnable() && $this->IsTopCategory()): ?>
-    <a href="<?php echo $this->getRssLink() ?>" class="pull-right"><?php echo $this->__('Subscribe to RSS feed') ?></a>
+    <a class="btn hidden-phone" href="<?php echo $this->getRssLink() ?>"><i class="fa-icon-rss"></i> <?php echo $this->__('RSS feed') ?></a>
 <?php endif; ?>
 
 <?php echo $this->getMessagesBlock()->getGroupedHtml() ?>

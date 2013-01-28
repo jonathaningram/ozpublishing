@@ -6,13 +6,9 @@
             </a>
         </div>
         <div class="span6 social-links hidden-phone">
-            <ul class="pull-right">
-                <li><a href="#"><i class="fa-icon-facebook"></i></a></li>
-                <li><a href="#"><i class="fa-icon-github"></i></a></li>
-                <li><a href="#"><i class="fa-icon-pinterest"></i></a></li>
-                <li><a href="https://twitter.com/OzPublishingAU"><i class="fa-icon-twitter"></i></a></li>
-                <li><a href="#"><i class="fa-icon-envelope-alt"></i></a></li>
-            </ul>
+            <div class="pull-right">
+                <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('header_social_links')->toHtml() ?>
+            </div>
         </div>
     </div>
     <div class="row-fluid">
@@ -27,6 +23,7 @@
                         </button>
                     </div>
                     <div class="nav-collapse collapse">
+                        <?php echo $this->getChildHtml('top.links') ?>
                         <?php echo $this->getChildHtml('topLinks') ?>
                         <?php echo $this->getChildHtml('topSearch') ?>
                     </div>

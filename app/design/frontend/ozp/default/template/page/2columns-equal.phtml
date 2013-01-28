@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="<?php echo $this->getLang() ?>">
+    <head>
+        <?php echo $this->getChildHtml('head') ?>
+    </head>
+    <body<?php echo $this->getBodyClass() ? ' class="' . $this->getBodyClass() . '"' : '' ?>>
+        <?php echo $this->getChildHtml('after_body_start') ?>
+        <header>
+            <?php echo $this->getChildHtml('header') ?>
+        </header>
+        <div class="container">
+            <div class="row-fluid">
+                <div class="main-container">
+                    <div class="page-header clearfix">
+                        <div class="pull-left">
+                            <?php echo $this->getChildHtml('page_header') ?>
+                        </div>
+                        <div class="pull-right">
+                            <?php //echo $this->getChildHtml('breadcrumbs') ?>
+                        </div>
+                    </div>
+                    <div class="row-fluid">
+                        <?php echo $this->getChildHtml('global_messages') ?>
+                        <?php echo $this->getChildHtml('content') ?>
+                    </div>
+                    <div class="row-fluid">
+                        <div class="span6">
+                            <div class="well">
+                                <?php echo $this->getChildHtml('global_messages') ?>
+                                <?php echo $this->getChildHtml('left_content') ?>
+                            </div>
+                        </div>
+                        <div class="span6">
+                            <div class="well">
+                                <?php echo $this->getChildHtml('right_content') ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <?php echo $this->getChildHtml('footer') ?>
+            <?php echo $this->getChildHtml('global_notices') ?>
+        </footer>
+        <?php echo $this->getChildHtml('before_body_end') ?>
+    </body>
+</html>

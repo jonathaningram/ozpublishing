@@ -1,41 +1,39 @@
 <div id="messages_product_view"><?php echo $this->getMessagesBlock()->getGroupedHtml() ?></div>
-<div class="well">
-    <h2><?php echo $this->__('Feel free to get in touch with us') ?></h2>
-    <p><?php echo $this->__('Whether you have an enquiry about our products, a question or just want to say hello.') ?></p>
-    <form action="<?php echo $this->getFormAction(); ?>" id="contactForm" method="post" class="">
-        <div class="control-group">
-            <label class="control-label required" for="name"><?php echo Mage::helper('contacts')->__('Your name') ?></label>
-            <div class="controls">
-                <input name="name" id="name" title="<?php echo Mage::helper('contacts')->__('Your name') ?>" value="<?php echo $this->htmlEscape($this->helper('contacts')->getUserName()) ?>" class="span11 focused required-entry" type="text" />
+<h2><?php echo $this->__('Feel free to get in touch with us.') ?></h2>
+<p><?php echo $this->__('Whether you have an enquiry about our products, a question or just want to say hello.') ?></p>
+<form action="<?php echo $this->getFormAction(); ?>" id="contactForm" method="post" class="">
+    <div class="control-group">
+        <label class="control-label required" for="name"><?php echo Mage::helper('contacts')->__('Your name') ?></label>
+        <div class="controls">
+            <input name="name" id="name" title="<?php echo Mage::helper('contacts')->__('Your name') ?>" value="<?php echo $this->htmlEscape($this->helper('contacts')->getUserName()) ?>" class="span11 focused required-entry" type="text" />
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label required" for="email"><?php echo Mage::helper('contacts')->__('Your email') ?></label>
+        <div class="controls">
+            <div class="input-prepend">
+                <span class="add-on"><i class="icon-envelope"></i></span><input name="email" id="email" title="<?php echo Mage::helper('contacts')->__('Your email') ?>" value="<?php echo $this->htmlEscape($this->helper('contacts')->getUserEmail()) ?>" class="span11 required-entry validate-email" type="email" />
             </div>
         </div>
-        <div class="control-group">
-            <label class="control-label required" for="email"><?php echo Mage::helper('contacts')->__('Your email') ?></label>
-            <div class="controls">
-                <div class="input-prepend">
-                    <span class="add-on"><i class="icon-envelope"></i></span><input name="email" id="email" title="<?php echo Mage::helper('contacts')->__('Your email') ?>" value="<?php echo $this->htmlEscape($this->helper('contacts')->getUserEmail()) ?>" class="span11 required-entry validate-email" type="email" />
-                </div>
-            </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label" for="telephone"><?php echo Mage::helper('contacts')->__('Your telephone number') ?></label>
+        <div class="controls">
+            <input name="telephone" id="telephone" title="<?php echo Mage::helper('contacts')->__('Your telephone number') ?>" class="span11" type="text" />
         </div>
-        <div class="control-group">
-            <label class="control-label" for="telephone"><?php echo Mage::helper('contacts')->__('Your telephone number') ?></label>
-            <div class="controls">
-                <input name="telephone" id="telephone" title="<?php echo Mage::helper('contacts')->__('Your telephone number') ?>" class="span11" type="text" />
-            </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label required" for="comment"><?php echo Mage::helper('contacts')->__('Your message') ?></label>
+        <div class="controls">
+            <textarea name="comment" id="comment" title="<?php echo Mage::helper('contacts')->__('Your message') ?>" class="span11 required-entry" cols="5" rows="3"></textarea>
         </div>
-        <div class="control-group">
-            <label class="control-label required" for="comment"><?php echo Mage::helper('contacts')->__('Your message') ?></label>
-            <div class="controls">
-                <textarea name="comment" id="comment" title="<?php echo Mage::helper('contacts')->__('Your message') ?>" class="span11 required-entry" cols="5" rows="3"></textarea>
-            </div>
-        </div>
-        <hr/>
-        <div>
-            <input type="text" name="hideit" id="hideit" value="" style="display:none !important;" />
-            <button type="submit" class="btn btn-large"><?php echo Mage::helper('contacts')->__('Send message') ?></button>
-        </div>
-    </form>
-</div>
+    </div>
+    <hr/>
+    <div>
+        <input type="text" name="hideit" id="hideit" value="" style="display:none !important;" />
+        <button type="submit" class="btn btn-large"><?php echo Mage::helper('contacts')->__('Send message') ?></button>
+    </div>
+</form>
 <script type="text/javascript">
 //<![CDATA[
     var contactForm = new VarienForm('contactForm', true);

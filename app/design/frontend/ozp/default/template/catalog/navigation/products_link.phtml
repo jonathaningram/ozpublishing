@@ -1,0 +1,10 @@
+<?php $liClasses = array() ?>
+
+<?php if ($this->getIsCatalogPage()): ?>
+    <?php $liClasses[] = 'active' ?>
+<?php endif ?>
+
+<li class="dropdown <?php echo implode(' ', $liClasses) ?>">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">Products <strong class="caret"></strong></a>
+    <?php echo $this->getBlockHtml('catalog_navbar') ?>
+</li>
