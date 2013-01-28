@@ -12,6 +12,7 @@ app/design/frontend/default/iphone/
 app/design/frontend/default/modern/
 app/design/frontend/enterprise/default
 app/design/install/
+app/etc/local.xml
 app/etc/modules/Enterprise_*
 app/etc/modules/Find_Feed.xml
 app/etc/modules/Mage_All.xml
