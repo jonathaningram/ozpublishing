@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title><?php echo $this->pageTitle ?></title>
+        <base href="<?php echo $this->getSkinUrl() ?>" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <meta name="robots" content="*" />
+        <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
+        <link rel="stylesheet" href="css/bootstrap-responsive.css" type="text/css" />
+        <link rel="stylesheet" type="text/css" href="css/ozp-wip.css" media="all">
+        <link rel="stylesheet" type="text/css" href="css/ozp.css" media="all">
+        <link rel="stylesheet" type="text/css" href="css/ozp-responsive.css" media="all">
+        <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+        <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/ozp.js"></script>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <div class="row-fluid">
+                    <div class="span6 logo">
+                        <a href="<?php echo $this->getBaseUrl() ?>">
+                            <img src="img/logo.png" alt="Oz Publishing"/>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="container">
+            <div class="row-fluid">
+                <div class="main-container">
+                    <?php require_once $contentTemplate; ?>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="container">
+                <div class="row-fluid">
+                    <div class="copyright-footer">
+                        <div class="span2">
+                            <div class="logo">
+                                <a href="<?php echo $this->getBaseUrl() ?>">
+                                    <img src="img/logo-white.png" alt="Oz Publishing"/>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="span10">
+                            <div class="copyright">
+                                <p>&copy; 2013 Oz Publishing Pty Ltd. All Rights Reserved.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row-fluid">
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
