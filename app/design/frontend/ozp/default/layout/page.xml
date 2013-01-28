@@ -70,6 +70,18 @@
                     <stylesheet>css/bootstrap.css</stylesheet>
                 </action>
                 <action method="addCss">
+                    <stylesheet>css/icons.css</stylesheet>
+                </action>
+                <action method="addCss">
+                    <stylesheet>css/social-icons.css</stylesheet>
+                </action>
+                <action method="addCss">
+                    <stylesheet>css/font-awesome.css</stylesheet>
+                </action>
+                <action method="addCss">
+                    <stylesheet>css/font-awesome-ie7.css</stylesheet>
+                </action>
+                <action method="addCss">
                     <stylesheet>css/ozp.css</stylesheet>
                 </action>
                 <action method="addCss">
