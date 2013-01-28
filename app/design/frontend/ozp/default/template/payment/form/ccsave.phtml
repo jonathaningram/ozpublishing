@@ -3,13 +3,13 @@
     <div class="control-group">
         <label for="<?php echo $_code ?>_cc_owner" class="control-label required"><?php echo $this->__('Name on card') ?></label>
         <div class="controls">
-            <input type="text" title="<?php echo $this->__('Name on card') ?>" class="span3 required-entry" id="<?php echo $_code ?>_cc_owner" name="payment[cc_owner]" value="<?php echo $this->htmlEscape($this->getInfoData('cc_owner')) ?>" />
+            <input type="text" title="<?php echo $this->__('Name on card') ?>" class="span6 required-entry" id="<?php echo $_code ?>_cc_owner" name="payment[cc_owner]" value="<?php echo $this->htmlEscape($this->getInfoData('cc_owner')) ?>" />
         </div>
     </div>
     <div class="control-group">
         <label for="<?php echo $_code ?>_cc_type" class="control-label required"><?php echo $this->__('Credit card type') ?></label>
         <div class="controls">
-            <select id="<?php echo $_code ?>_cc_type" name="payment[cc_type]" title="<?php echo $this->__('Credit card type') ?>" class="input-medium required-entry validate-cc-type-select">
+            <select id="<?php echo $_code ?>_cc_type" name="payment[cc_type]" title="<?php echo $this->__('Credit card type') ?>" class="span6 required-entry validate-cc-type-select">
                 <option value=""><?php echo $this->__('Please select') ?></option>
                 <?php $_ccType = $this->getInfoData('cc_type') ?>
                 <?php foreach ($this->getCcAvailableTypes() as $_typeCode => $_typeName): ?>
@@ -21,20 +21,20 @@
     <div class="control-group">
         <label for="<?php echo $_code ?>_cc_number" class="control-label required"><?php echo $this->__('Credit card number') ?></label>
         <div class="controls">
-            <input type="text" id="<?php echo $_code ?>_cc_number" name="payment[cc_number]" title="<?php echo $this->__('Credit card number') ?>" class="span3 validate-cc-number validate-cc-type" value="" />
+            <input type="text" id="<?php echo $_code ?>_cc_number" name="payment[cc_number]" title="<?php echo $this->__('Credit card number') ?>" class="span6 validate-cc-number validate-cc-type" value="" />
         </div>
     </div>
     <div class="control-group">
         <label for="<?php echo $_code ?>_expiration" class="control-label required"><?php echo $this->__('Expiration date') ?></label>
         <div class="controls">
-            <select id="<?php echo $_code ?>_expiration" name="payment[cc_exp_month]" class="input-medium month validate-cc-exp required-entry">
+            <select id="<?php echo $_code ?>_expiration" name="payment[cc_exp_month]" class="span4 month validate-cc-exp required-entry">
                 <?php $_ccExpMonth = $this->getInfoData('cc_exp_month') ?>
                 <?php foreach ($this->getCcMonths() as $k => $v): ?>
                     <option value="<?php echo $k ? $k : '' ?>"<?php if ($k == $_ccExpMonth): ?> selected="selected"<?php endif ?>><?php echo $v ?></option>
                 <?php endforeach ?>
             </select>
             <?php $_ccExpYear = $this->getInfoData('cc_exp_year') ?>
-            <select id="<?php echo $_code ?>_expiration_yr" name="payment[cc_exp_year]" class="input-mini year required-entry">
+            <select id="<?php echo $_code ?>_expiration_yr" name="payment[cc_exp_year]" class="span2 year required-entry">
                 <?php foreach ($this->getCcYears() as $k => $v): ?>
                     <option value="<?php echo $k ? $k : '' ?>"<?php if ($k == $_ccExpYear): ?> selected="selected"<?php endif ?>><?php echo $v ?></option>
                 <?php endforeach ?>
