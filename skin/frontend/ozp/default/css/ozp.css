@@ -493,6 +493,12 @@ td.a-right {
     background-color: #FFF;
 }
 
+ol.products-list,
+ul.products-list {
+    list-style: none;
+    margin-left: 0;
+}
+
 .products-list .item {
     margin-bottom: 20px;
 }
