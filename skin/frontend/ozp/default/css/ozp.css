@@ -1,13 +1,6 @@
-/*@font-face {
-    font-family: 'Droid Sans';
-    font-style: normal;
-    font-weight: 400;
-    src: local('Droid Sans'), local('DroidSans'), url(../font/droidsans.woff) format('woff');
-}*/
-
 body {
     font-family: 'Droid Sans';
-    background: #FFFFFF url(../img/lined_paper_by_LL_stock-r.jpg) repeat 0 0.2%;
+    background: #FFFFFF url(../img/clouds-texture.jpg) repeat;
     color: #888888;
 }
 
@@ -214,7 +207,7 @@ header .logo  {
 .navbar .nav > li > a {
     color: #FFF;
     background-color: #63c430;
-    border-top:4px solid transparent;
+    border-top: 4px solid transparent;
     text-shadow: none;
     font-size: 14px;
     padding: 12px 20px;
