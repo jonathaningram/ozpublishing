@@ -61,6 +61,11 @@
 
                 <action method="addItem">
                     <type>skin_js</type>
+                    <name>js/jquery.flexslider-min.js</name>
+                </action>
+
+                <action method="addItem">
+                    <type>skin_js</type>
                     <name>js/ozp.js</name>
                 </action>
 
@@ -80,6 +85,9 @@
                 </action>
                 <action method="addCss">
                     <stylesheet>css/font-awesome-ie7.css</stylesheet>
+                </action>
+                <action method="addCss">
+                    <stylesheet>css/flexslider.css</stylesheet>
                 </action>
                 <action method="addCss">
                     <stylesheet>css/ozp.css</stylesheet>
