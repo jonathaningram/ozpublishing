@@ -39,6 +39,14 @@ Default layout, loads most of the pages
             <block type="checkout/links" name="checkout_cart_link">
                 <action method="addCartLink"></action>
             </block>
+            <block type="cms/block" name="cms_catalogue_nav_item">
+                <action method="setBlockId">
+                    <block_id>catalogue_nav_item</block_id>
+                </action>
+            </block>
+            <action method="addLinkBlock">
+                <blockName>cms_catalogue_nav_item</blockName>
+            </action>
         </reference>
         <reference name="right">
             <block type="checkout/cart_sidebar" name="cart_sidebar" template="checkout/cart/sidebar.phtml" before="-">
